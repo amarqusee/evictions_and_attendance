@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data – MUSA 550 Final Project: Anthony Marqusee</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9ea0a49c779b6fc496fdb60b6bf00fef.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b42cd826e5e3b4a7d83aac9c9e282496.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../docs/Final Project AMarqusee.html">Evictions and Attendance Rates in Philadelphia School Catchments</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/course-icon.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/MUSA-550-Fall-2024/" title="MUSA 550 GitHub" class="quarto-navigation-tool px-1" aria-label="MUSA 550 GitHub"><i class="bi bi-github"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Me</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Evictions and Attendance Rates in Philadelphia School Catchments</span></span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#import-libraries" id="toc-import-libraries" class="nav-link active" data-scroll-target="#import-libraries">Import Libraries</a></li>
+  <li><a href="#read-in-data" id="toc-read-in-data" class="nav-link" data-scroll-target="#read-in-data">Read in Data</a>
+  <ul class="collapse">
+  <li><a href="#change-the-format-of-the-school-names-in-the-catchment-to-firstname-lastname-school-to-match-their-format-in-the-attendance-data" id="toc-change-the-format-of-the-school-names-in-the-catchment-to-firstname-lastname-school-to-match-their-format-in-the-attendance-data" class="nav-link" data-scroll-target="#change-the-format-of-the-school-names-in-the-catchment-to-firstname-lastname-school-to-match-their-format-in-the-attendance-data">Change the format of the school names in the catchment to “FirstName LastName School” to match their format in the attendance data</a></li>
+  <li><a href="#map-the-point-data-of-the-evictions-and-spatially-join-them-to-school-catchments" id="toc-map-the-point-data-of-the-evictions-and-spatially-join-them-to-school-catchments" class="nav-link" data-scroll-target="#map-the-point-data-of-the-evictions-and-spatially-join-them-to-school-catchments">Map the point data of the evictions and spatially join them to school catchments</a></li>
+  <li><a href="#clean-up-on-attendance-data" id="toc-clean-up-on-attendance-data" class="nav-link" data-scroll-target="#clean-up-on-attendance-data">Clean up on attendance data</a></li>
+  <li><a href="#matching-school-names-with-fuzzy-matching" id="toc-matching-school-names-with-fuzzy-matching" class="nav-link" data-scroll-target="#matching-school-names-with-fuzzy-matching">Matching School Names with Fuzzy Matching</a></li>
+  </ul></li>
+  <li><a href="#merge-attendance-data-with-catchment-data" id="toc-merge-attendance-data-with-catchment-data" class="nav-link" data-scroll-target="#merge-attendance-data-with-catchment-data">Merge Attendance Data with Catchment Data</a></li>
+  <li><a href="#group-by-year-and-school" id="toc-group-by-year-and-school" class="nav-link" data-scroll-target="#group-by-year-and-school">Group by Year and School</a></li>
+  <li><a href="#evictions-over-time" id="toc-evictions-over-time" class="nav-link" data-scroll-target="#evictions-over-time">Evictions Over Time</a></li>
+  <li><a href="#attendance-rates-over-time" id="toc-attendance-rates-over-time" class="nav-link" data-scroll-target="#attendance-rates-over-time">Attendance Rates Over Time</a></li>
+  <li><a href="#attendance-rate-vs-eviction-count" id="toc-attendance-rate-vs-eviction-count" class="nav-link" data-scroll-target="#attendance-rate-vs-eviction-count">Attendance Rate vs Eviction Count</a></li>
+  <li><a href="#examining-the-data-year-by-year" id="toc-examining-the-data-year-by-year" class="nav-link" data-scroll-target="#examining-the-data-year-by-year">Examining the Data Year by Year</a>
+  <ul class="collapse">
+  <li><a href="#what-about-prior-year-evictions" id="toc-what-about-prior-year-evictions" class="nav-link" data-scroll-target="#what-about-prior-year-evictions">What about Prior Year Evictions?</a></li>
+  </ul></li>
+  <li><a href="#machine-learning-modeling-with-scikit" id="toc-machine-learning-modeling-with-scikit" class="nav-link" data-scroll-target="#machine-learning-modeling-with-scikit">Machine Learning: Modeling with Scikit</a></li>
+  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a>
+  <ul class="collapse">
+  <li><a href="#fit-and-score-the-model" id="toc-fit-and-score-the-model" class="nav-link" data-scroll-target="#fit-and-score-the-model">Fit and score the model</a></li>
+  </ul></li>
+  <li><a href="#plot-the-predicted-vs-actual-results" id="toc-plot-the-predicted-vs-actual-results" class="nav-link" data-scroll-target="#plot-the-predicted-vs-actual-results">Plot the Predicted vs Actual Results</a></li>
+  <li><a href="#a-subgroup-2018" id="toc-a-subgroup-2018" class="nav-link" data-scroll-target="#a-subgroup-2018">A Subgroup: 2018</a></li>
+  <li><a href="#what-do-evictions-add-to-the-model" id="toc-what-do-evictions-add-to-the-model" class="nav-link" data-scroll-target="#what-do-evictions-add-to-the-model">What do evictions add to the model?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Eviction Data, School Catchment Polygons, and Attendance Data Download Landlord Tenant Cases in Philadeplhia Municipal Court from 2016 to Present: https://docs.philalegal.org/index.php/s/37j1xroW9NvX6x2 “Tenant-Addresses-Opa” is the one with geocoded addresses, dates, and docket numbers.</p>
+<p>older: https://docs.philalegal.org/index.php/s/w9IQZrb8eDqXJkU</p>
+<p>School Catchments (Elementary Schools) https://hub.arcgis.com/datasets/phl::schooldist-catchments-es/about</p>
+<p>Attendance Data https://www.philasd.org/performance/programsservices/open-data/school-performance/#attendance</p>
+<section id="import-libraries" class="level1">
+<h1>Import Libraries</h1>
+<div id="db5839c5-6ba9-4fe2-ab58-0d3c696efcca" class="cell" data-tags="[]" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> shapely.geometry <span class="im">import</span> Point</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#import numpy as np</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="st">"numpy&lt;2"</span> <span class="co">#to resolve an error that arose when using latest numpy</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#for fuzzy matching of school names</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install fuzzywuzzy</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fuzzywuzzy <span class="im">import</span> fuzz</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fuzzywuzzy <span class="im">import</span> process</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install python<span class="op">-</span>Levenshtein </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">--</span>upgrade holoviews numpy</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> hvplot.pandas</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#for modeling</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestRegressor</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> make_pipeline</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install missingno</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> missingno <span class="im">as</span> msno</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> PolynomialFeatures</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> make_pipeline</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Requirement already satisfied: numpy&lt;2 in c:\users\antho\miniforge-pypy3\envs\musa-550-fall-2023\lib\site-packages (1.23.5)</code></pre>
+</div>
+</div>
+</section>
+<section id="read-in-data" class="level1">
+<h1>Read in Data</h1>
+<div id="227c09dd-933d-4bfa-88e7-8aadaf7f0a11" class="cell" data-tags="[]" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ensure your paths are correct if you structure the files differently</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>evictions_raw <span class="op">=</span> pd.read_csv(<span class="st">"./Final Project/tenant-addresses-opa.txt"</span>) <span class="co">#path for eviction data</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>catchments <span class="op">=</span> gpd.read_file(<span class="st">"./Final Project/SchoolDist_Catchments_ES.geojson"</span>) <span class="co">#path for catchment polygons</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>attendance_raw <span class="op">=</span> pd.read_csv(<span class="st">"./Final Project\SDP_95_Attendance_School_S.csv"</span>) <span class="co">#path for attendance data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="change-the-format-of-the-school-names-in-the-catchment-to-firstname-lastname-school-to-match-their-format-in-the-attendance-data" class="level2">
+<h2 class="anchored" data-anchor-id="change-the-format-of-the-school-names-in-the-catchment-to-firstname-lastname-school-to-match-their-format-in-the-attendance-data">Change the format of the school names in the catchment to “FirstName LastName School” to match their format in the attendance data</h2>
+<div id="aa1943ce-9ef8-4d27-9f66-f36b4de09756" class="cell" data-tags="[]" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#to make the name formatting match, take everything after the comma and put it at the front, then add ' School'</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>catchments[<span class="st">'school_name'</span>] <span class="op">=</span> catchments[<span class="st">'ES_NAME'</span>].<span class="bu">apply</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: <span class="st">' '</span>.join(x.split(<span class="st">', '</span>)[::<span class="op">-</span><span class="dv">1</span>]).strip() <span class="op">+</span> <span class="st">' School'</span> <span class="cf">if</span> <span class="bu">isinstance</span>(x, <span class="bu">str</span>) <span class="kw">and</span> <span class="st">','</span> <span class="kw">in</span> <span class="bu">str</span>(x) <span class="cf">else</span> x</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="map-the-point-data-of-the-evictions-and-spatially-join-them-to-school-catchments" class="level2">
+<h2 class="anchored" data-anchor-id="map-the-point-data-of-the-evictions-and-spatially-join-them-to-school-catchments">Map the point data of the evictions and spatially join them to school catchments</h2>
+<div id="6c93d16a-ada0-47c2-ae79-bc739698525d" class="cell" data-tags="[]" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert latitude and longitude to a geometry column (Point)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>geometry <span class="op">=</span> [Point(lon, lat) <span class="cf">for</span> lon, lat <span class="kw">in</span> <span class="bu">zip</span>(evictions_raw[<span class="st">'longitude'</span>], evictions_raw[<span class="st">'latitude'</span>])]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a GeoDataFrame</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>evictions_gdf <span class="op">=</span> gpd.GeoDataFrame(evictions_raw, geometry<span class="op">=</span>geometry).set_crs(<span class="st">"EPSG:4326"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="f3d5c62c-0dab-4e59-9488-f6749eef13d9" class="cell" data-tags="[]" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Spatial join evictions to school catchments</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>evictions_in_catchments <span class="op">=</span> gpd.sjoin(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    evictions_gdf,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    catchments,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    predicate<span class="op">=</span><span class="st">"within"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">"left"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">#evictions_in_catchments.head() #uncomment to view the dataframe head</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">id</th>
+<th data-quarto-table-cell-role="th">d_filing</th>
+<th data-quarto-table-cell-role="th">parcel_number</th>
+<th data-quarto-table-cell-role="th">latitude</th>
+<th data-quarto-table-cell-role="th">longitude</th>
+<th data-quarto-table-cell-role="th">geometry</th>
+<th data-quarto-table-cell-role="th">index_right</th>
+<th data-quarto-table-cell-role="th">OBJECTID</th>
+<th data-quarto-table-cell-role="th">ES_ID</th>
+<th data-quarto-table-cell-role="th">ES_NAME</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">GR_ID_09</th>
+<th data-quarto-table-cell-role="th">GR_ID_10</th>
+<th data-quarto-table-cell-role="th">GR_ID_11</th>
+<th data-quarto-table-cell-role="th">GR_ID_12</th>
+<th data-quarto-table-cell-role="th">ES_GRADE</th>
+<th data-quarto-table-cell-role="th">MS_GRADE</th>
+<th data-quarto-table-cell-role="th">HS_GRADE</th>
+<th data-quarto-table-cell-role="th">Shape__Area</th>
+<th data-quarto-table-cell-role="th">Shape__Length</th>
+<th data-quarto-table-cell-role="th">school_name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>LT-02-10-23-2533</td>
+<td>2022-10-21 00:00:00</td>
+<td>61220300</td>
+<td>39.960056</td>
+<td>-75.205382</td>
+<td>POINT (-75.20538 39.96006)</td>
+<td>43.0</td>
+<td>44.0</td>
+<td>1470</td>
+<td>Locke, Alain</td>
+<td>...</td>
+<td>1020</td>
+<td>1020</td>
+<td>1020</td>
+<td>1020</td>
+<td>K-8</td>
+<td>K-8</td>
+<td>9-12</td>
+<td>2.699519e+06</td>
+<td>8661.940577</td>
+<td>Alain Locke School</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>LT-16-01-04-3000</td>
+<td>2016-01-04 00:00:00</td>
+<td>871123700</td>
+<td>39.918318</td>
+<td>-75.171171</td>
+<td>POINT (-75.17117 39.91832)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>2000</td>
+<td>2000</td>
+<td>2000</td>
+<td>2000</td>
+<td>K-8</td>
+<td>K-8</td>
+<td>9-12</td>
+<td>1.976860e+07</td>
+<td>20031.922528</td>
+<td>F Amedee Bregy School</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>LT-16-01-04-3001</td>
+<td>2016-01-04 00:00:00</td>
+<td>591143400</td>
+<td>40.053903</td>
+<td>-75.158813</td>
+<td>POINT (-75.15881 40.0539)</td>
+<td>120.0</td>
+<td>121.0</td>
+<td>3426</td>
+<td>Mastery Charter School at Pastorius</td>
+<td>...</td>
+<td>6060</td>
+<td>6060</td>
+<td>6060</td>
+<td>6060</td>
+<td>K-8</td>
+<td>K-8</td>
+<td>9-12</td>
+<td>2.060819e+06</td>
+<td>6615.488075</td>
+<td>Mastery Charter School at Pastorius</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>LT-16-01-04-3002</td>
+<td>2016-01-04 00:00:00</td>
+<td>364306000</td>
+<td>39.933526</td>
+<td>-75.190118</td>
+<td>POINT (-75.19012 39.93353)</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>3424</td>
+<td>Universal Institute Charter School at Alcorn</td>
+<td>...</td>
+<td>3417</td>
+<td>3417</td>
+<td>3417</td>
+<td>3417</td>
+<td>K-8</td>
+<td>K-8</td>
+<td>9-12</td>
+<td>6.872673e+06</td>
+<td>12326.330378</td>
+<td>Universal Institute Charter School at Alcorn</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>LT-16-01-04-3003</td>
+<td>2016-01-04 00:00:00</td>
+<td>122200700</td>
+<td>40.042783</td>
+<td>-75.165596</td>
+<td>POINT (-75.1656 40.04278)</td>
+<td>120.0</td>
+<td>121.0</td>
+<td>3426</td>
+<td>Mastery Charter School at Pastorius</td>
+<td>...</td>
+<td>6060</td>
+<td>6060</td>
+<td>6060</td>
+<td>6060</td>
+<td>K-8</td>
+<td>K-8</td>
+<td>9-12</td>
+<td>2.060819e+06</td>
+<td>6615.488075</td>
+<td>Mastery Charter School at Pastorius</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 33 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="clean-up-on-attendance-data" class="level2">
+<h2 class="anchored" data-anchor-id="clean-up-on-attendance-data">Clean up on attendance data</h2>
+<div id="09023280-5f83-4d34-88b0-6a03bee8b8f1" class="cell" data-tags="[]" data-execution_count="178">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#assign each school year only one year in order to match it with a year from eviction data. I called it only the end year (ie more of the 2013-2014 academic year takes place in 2014 than 2013)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#it would have been nice to extract the full dates from the eviction data and assign them to school years directly, but I ran out of time</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>attendance_raw[<span class="st">'year'</span>]<span class="op">=</span>attendance_raw[<span class="st">'School Year'</span>].<span class="bu">str</span>[<span class="dv">5</span>:] </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#keep only rows where the attendance category is All Students </span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>attendance <span class="op">=</span> attendance_raw[attendance_raw[<span class="st">'Category'</span>] <span class="op">==</span> <span class="st">'All Students'</span>]</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Add a new column for the previous year's attendance</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Sort by 'year' to make sure we have the data in the correct order</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>attendance <span class="op">=</span> attendance.sort_values(by<span class="op">=</span><span class="st">'year'</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#add the new column</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>attendance[<span class="st">'previous_year_attendance'</span>] <span class="op">=</span> attendance.groupby(<span class="st">'School Name'</span>)[<span class="st">'% with 95%+ Attendance (Yearly)'</span>].shift(<span class="dv">1</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">#attendance.head() #uncomment to view the dataframe head</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="178">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">School Year</th>
+<th data-quarto-table-cell-role="th">ULCS Code</th>
+<th data-quarto-table-cell-role="th">SCN Code</th>
+<th data-quarto-table-cell-role="th">School Name</th>
+<th data-quarto-table-cell-role="th">Sector</th>
+<th data-quarto-table-cell-role="th">Category</th>
+<th data-quarto-table-cell-role="th">Group</th>
+<th data-quarto-table-cell-role="th">Total Students (Yearly)</th>
+<th data-quarto-table-cell-role="th"># with 95%+ Attendance (Yearly)</th>
+<th data-quarto-table-cell-role="th">% with 95%+ Attendance (Yearly)</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">previous_year_attendance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2013-2014</td>
+<td>1010</td>
+<td>101</td>
+<td>John Bartram High School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>1250</td>
+<td>164</td>
+<td>13.12</td>
+<td>2014</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2054</td>
+<td>2013-2014</td>
+<td>6310</td>
+<td>631</td>
+<td>John F. McCloskey School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>476</td>
+<td>271</td>
+<td>56.93</td>
+<td>2014</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2069</td>
+<td>2013-2014</td>
+<td>6320</td>
+<td>632</td>
+<td>Thomas Mifflin School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>325</td>
+<td>114</td>
+<td>35.08</td>
+<td>2014</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2086</td>
+<td>2013-2014</td>
+<td>6340</td>
+<td>634</td>
+<td>Joseph Pennell School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>459</td>
+<td>125</td>
+<td>27.23</td>
+<td>2014</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2100</td>
+<td>2013-2014</td>
+<td>6350</td>
+<td>635</td>
+<td>Samuel Pennypacker School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>435</td>
+<td>180</td>
+<td>41.38</td>
+<td>2014</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="matching-school-names-with-fuzzy-matching" class="level2">
+<h2 class="anchored" data-anchor-id="matching-school-names-with-fuzzy-matching">Matching School Names with Fuzzy Matching</h2>
+<p>Even after reformatting the names in the catchment data to FirstName LastName, there are enough differences that fuzzy matching is needed–for example, to deal with differences between, eg, “Anthony M. Marqusee School” and “Anthony Marqusee School.”</p>
+<p>I used fuzzywuzzy to accomplish this.</p>
+<div id="45f31863-a97d-4d25-9a63-00fca2c3239b" class="cell" data-tags="[]" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#viewing the lists of school names in the attendance data</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#attendance['School Name'].unique() #uncomment and run to see how the schools are named: FirstName LastName School, for ones named after people</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="43">
+<pre><code>array(['John Bartram High School', 'West Philadelphia High School',
+       'High School of the Future',
+       'Paul Robeson High School for Human Services',
+       'William L. Sayre High School', 'William T. Tilden School',
+       'Motivation High School', 'John Barry School',
+       'William C. Bryant School', 'Joseph W. Catharine School',
+       'Benjamin B. Comegys School', 'Sadie Alexander School',
+       'Andrew Hamilton School', 'Avery D. Harrington School',
+       'Samuel B. Huey School', 'Henry C. Lea School',
+       'William C. Longstreth School', 'Morton McMichael School',
+       'S. Weir Mitchell School', 'Thomas G. Morton School',
+       'Samuel Powel School', 'John M. Patterson School',
+       'James Rhoads School', 'Martha Washington School',
+       'Penrose School', 'Add B. Anderson School', 'Alain Locke School',
+       'Rudolph Blankenburg School', 'Middle Years Alternative School',
+       'South Philadelphia High School', 'Benjamin Franklin High School',
+       'High School for Creative and Performing Arts School',
+       'Julia R. Masterman School', 'Furness High School',
+       'D. Newlin Fell School', 'Bache-Martin School',
+       'F. Amedee Bregy School', 'George W. Childs School',
+       'Franklin Learning Center', 'Stephen Girard School',
+       'General George A. McCall School', 'Delaplaine McDaniel School',
+       'William M. Meredith School', 'Robert Morris School',
+       'Girard Academic Music Program', 'Edwin M. Stanton School',
+       'Albert M. Greenfield School', 'Chester A. Arthur School',
+       'Laura W. Waring School', 'Andrew Jackson School',
+       'Abram S. Jenks School', 'Francis S. Key School',
+       'Eliza B. Kirkbride School', 'George W. Nebinger School',
+       'Academy at Palumbo', 'George W. Sharswood School',
+       'Southwark School', 'Science Leadership Academy',
+       'Constitution High School', 'John H. Taggart School',
+       'Vare-Washington School', 'Overbrook High School',
+       'High School of Engineering and Science',
+       'Murrell Dobbins Career and Technical High School',
+       'Dimner Beeber School', 'Strawberry Mansion High School',
+       'James G. Blaine School', 'Lewis C. Cassidy Academics Plus School',
+       'William Dick School', 'Samuel Gompers School',
+       'Edward Heston School', 'Robert E. Lamberton School',
+       'E. Washington Rhodes School', 'Overbrook School',
+       'Thomas M. Peirce School', 'Dr. Ethel Allen School',
+       'Tanner G. Duckrey School', 'Richard R. Wright School',
+       'Overbrook Educational Center', 'Edward Gideon School',
+       'William D. Kelley School', 'General George G. Meade School',
+       'Thomas A. Edison High School', 'Philadelphia Military Academy',
+       'Jules E. Mastbaum Area Vocational Technical High School',
+       'Parkway Northwest High School', 'Parkway Center City High School',
+       'Parkway West High School', 'William W. Bodine High School',
+       'Penn Treaty High School', 'Julia de Burgos School',
+       'Alexander Adaire School', 'Henry A. Brown School',
+       'Russell H. Conwell School', 'Paul L. Dunbar School',
+       'Lewis Elkin School', 'Horatio B. Hackett School',
+       'John F. Hartranft School', 'William H. Hunter School',
+       'James R. Ludlow School', 'William McKinley School',
+       'John Moffet School', 'Potter-Thomas School', 'Richmond School',
+       'Isaac A. Sheppard School', 'John Welsh School',
+       'Alternative Middle Years at James Martin',
+       'Frances E. Willard School', 'William Cramp School',
+       'General Philip Kearny School', 'Cayuga School',
+       'Thurgood Marshall School',
+       'Kensington International Business, Finance, and Entrepreneurship High School',
+       'Kensington High School for Creative and Performing Arts',
+       'Philip H. Sheridan School', 'Kensington Health Sciences Academy',
+       'Spring Garden School', 'John H. Webster School',
+       'Kensington Urban Education Academy',
+       'Honorable Luis Munoz-Marin School', 'Central High School',
+       'Roxborough High School', 'Walter B. Saul High School',
+       'Philadelphia High School for Girls',
+       'Martin Luther King High School',
+       'A. Philip Randolph Career and Technical High School',
+       'Morris E. Leeds School', 'Anna B. Day School',
+       'Franklin S. Edmonds School', 'Eleanor C. Emlen School',
+       'Fitler Academics Plus School', 'Charles W. Henry School',
+       'Henry H. Houston School', 'John S. Jenks School',
+       'James Logan School', 'John F. McCloskey School',
+       'Thomas Mifflin School', 'Joseph Pennell School',
+       'Samuel Pennypacker School', 'Theodore Roosevelt School',
+       'Shawmont School', 'Edward T. Steel School',
+       'Cook-Wissahickon School', 'John Wister School',
+       'Anna L. Lingelbach School', 'James Dobson School',
+       'Hill-Freedman School', 'John B. Kelly School',
+       'Academy for the Middle Years at Northwest',
+       'Lankenau High School', 'Frankford High School',
+       'Jay Cooke School', 'Warren G. Harding School',
+       'Samuel Fels High School', 'General Louis Wagner School',
+       'Juniata Park Academy', 'Clara Barton School',
+       'Laura H. Carnell School', 'Ellwood School',
+       'Thomas K. Finletter School', 'Benjamin Franklin School',
+       'Allen M. Stearne School', 'Francis Hopkinson School',
+       'Feltonville Intermediate School', 'Julia W. Howe School',
+       'Henry W. Lawton School', 'James R. Lowell School',
+       'John Marshall School', 'Grover Washington, Jr. School',
+       'Alexander K. McClure School', 'Andrew J. Morrison School',
+       'Olney School', 'James J. Sullivan School', 'Bayard Taylor School',
+       'William H. Ziegler School', 'Bridesburg School',
+       'Prince Hall School', 'Feltonville School of Arts and Sciences',
+       'Mary M. Bethune School', 'William Rowen School',
+       'Roberto Clemente School', 'Abraham Lincoln High School',
+       'Northeast High School', 'George Washington High School',
+       'Arts Academy at Benjamin Rush',
+       'Swenson Arts and Technology High School', 'Woodrow Wilson School',
+       'Austin Meehan School', 'Baldi School',
+       'John Hancock Demonstration School', 'Ethan Allen School',
+       'Joseph H. Brown School', 'Kennedy C. Crossan School',
+       'Hamilton Disston School', 'Edwin Forrest School',
+       'Fox Chase School', 'Thomas Holme School', 'Mayfair School',
+       'J. Hampton Moore School', 'General J. Harry LaBrum School',
+       'Solomon Solis-Cohen School', 'Gilbert Spruance School',
+       'Rhawnhurst School', 'Watson Comly School',
+       'Louis H. Farrell School', 'A.L. Fitzpatrick School',
+       'Anne Frank School', 'Robert B. Pollock School',
+       'Stephen Decatur School', 'Joseph Greenberg School',
+       'William H. Loesche School', 'The Workshop School',
+       'The Science Leadership Academy at Beeber', 'Building 21',
+       'The U School', 'The LINC',
+       'John Story Jenks Academy for Arts and Sciences',
+       'Hill-Freedman World Academy',
+       'Jenks Academy for Arts and Sciences',
+       'Science Leadership Academy Middle School',
+       'Kenderton Elementary School', 'Kensington High School',
+       'High School for Creative and Performing Arts',
+       'Overbrook Elementary School',
+       'Parkway Center City Middle College High School',
+       'Vaux High School: A Big Picture'], dtype=object)</code></pre>
+</div>
+</div>
+<div id="29c31b42-efae-46b1-af76-7928ec6bb5d6" class="cell" data-tags="[]" data-execution_count="53">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#viewing the list of school names in the catchment/eviction data</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#evictions_in_catchments['ES_NAME'].unique() #uncomment and run to see how the school names are formatted: LastName, FirstName of school namesake, for ones named after people</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="53">
+<pre><code>array(['Locke, Alain', 'Bregy, F Amedee',
+       'Mastery Charter School at Pastorius',
+       'Universal Institute Charter School at Alcorn', 'Willard, Frances',
+       'Peirce, Thomas M', 'Hamilton, Andrew', 'Juniata Park Academy',
+       'Logan, James', 'Mastery Charter School at Clymer',
+       'Day, Anna Blakiston', 'Carnell, Laura H', 'Morton, Thomas G',
+       'Rhoads, James', 'Mastery Charter School at Harrity',
+       'Longstreth, William', 'Cassidy, Lewis C', 'Lamberton, Robert E',
+       'Loesche, William H', 'Mastery Charter School at Mann',
+       'Rhodes, E Washington', 'McDaniel, Delaplaine', 'Prince Hall',
+       'Bryant, William Cullen', 'Edmonds, Franklin S',
+       'Overbrook Elementary', 'Elkin, Lewis', 'Roosevelt, Theodore',
+       'Penn Alexander', 'Kearny, General Philip', 'Moore, J Hampton',
+       'Sullivan, James J', 'Henry, Charles W', 'Meade, General George G',
+       'Universal Institute Charter School at Daroff',
+       'Northeast Community Propel Academy', 'Washington, Martha',
+       'McMichael, Morton', 'Blankenburg, Rudolph', 'Forrest, Edwin',
+       'Wright, Richard', 'Comegys, Benjamin B', 'Allen, Ethan',
+       'Kelly, John B', 'Mastery Charter School at Wister',
+       'Barry, Commodore John', 'Harrington, Avery', 'McKinley, William',
+       'Hartranft, John F', 'Duckrey, Tanner', 'Frank, Anne',
+       'Waring, Laura W', 'Emlen, Eleanor C', 'Marshall, John',
+       'Mastery Charter School at Frederick Douglass', 'Webster, John H',
+       'Greenfield, Albert M', 'Morris, Robert', 'Girard, Stephen',
+       'Fitzpatrick, Aloysius L', 'Richmond', 'Mitchell, Weir', 'Cayuga',
+       'Lawton, Henry W', 'Disston, Hamilton', 'Pollock, Robert B',
+       'Finletter, Thomas K', 'Blaine, James G', 'Farrell, Louis H',
+       'Stanton, Edwin M', 'Hackett, Horatio B', 'Lingelbach, Anna L',
+       'Franklin, Benjamin ES', 'Vare-Washington ES',
+       'Universal Institute Charter School at Bluford', 'Penrose',
+       'Holme, Thomas', 'Gompers, Samuel', 'Decatur, Stephen',
+       'Powel, Samuel', 'Pennell, Joseph', 'Bethune, Mary Mc Leod',
+       'Shawmont', 'Phila Charter for Arts at HR Edmunds', 'Cooke, Jay',
+       'Spruance, Gilbert', 'Mastery Charter School at Smedley',
+       'Sheridan, Philip H', 'Bache / Martin', 'Dick, William',
+       'Rowen, William', 'Dunbar, Paul Laurence',
+       'Global Leadership Academy Charter School at Huey',
+       'Childs, George W', 'Ludlow, James R', 'Taggart, John H',
+       'Jenks, John S', 'Mastery Charter School at Cleveland',
+       'Brown, Joseph H', 'Heston, Edward', 'Dobson, James',
+       'Solis-Cohen, Solomon', 'Kelley, William D', 'Olney Elementary',
+       'Mifflin, Thomas', 'Sheppard, Isaac', 'Howe, Julia Ward',
+       'Rhawnhurst', 'Ellwood', 'Anderson, Add B', 'Marshall, Thurgood',
+       'Lowell, James R', 'Ziegler, William H',
+       'McCall, General George A', 'Steel, Edward',
+       'Belmont Elementary Charter School', 'Patterson, John M',
+       'Barton, Clara', 'Universal Institute Charter School at Creighton',
+       'Cramp, William', 'McClure, Alexander K', 'Stearne, Allen M',
+       'Bridesburg', 'Hopkinson, Francis', 'Greenberg, Joseph',
+       'Sharswood, George', 'Houston, Henry E', 'Lea, Henry C',
+       'Morrison, Andrew J', 'Mayfair', 'Cook-Wissahickon',
+       'Brown, Henry A', 'Pennypacker, Samuel', 'Welsh, John',
+       'Kenderton', 'Allen, Ethel D', 'Comly, Watson',
+       'Hunter, William H', 'Fanny Jackson Coppin', 'Catharine, Joseph',
+       'American Paradigm Charter School at Birney', 'Southwark',
+       'Spring Garden', 'Meredith, William M', 'Crossan, Kennedy C',
+       'Hancock-LaBrum', 'Moffet, John', 'Gideon, Edward',
+       'Kirkbride, Elizabeth B', 'Arthur, Chester A',
+       'Key, Francis Scott', 'Fell, D Newlin', 'Taylor, Bayard',
+       'Jenks, Abram', 'McCloskey, John F', 'Potter-Thomas',
+       'deBurgos, Julia', 'Adaire, Alexander', 'Fox Chase',
+       'Munoz-Marin, Luis', 'Nebinger, George W', nan], dtype=object)</code></pre>
+</div>
+</div>
+<div id="ae21263d-8b3f-4553-867e-412ce072c352" class="cell" data-tags="[]" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract unique school names from both dataframes</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>unique_schools_evictions <span class="op">=</span> evictions_in_catchments[<span class="st">'school_name'</span>].unique()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>unique_schools_attendance <span class="op">=</span> attendance[<span class="st">'School Name'</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="8cd72e01-7ad3-419b-878d-c4e6433e8ecb" class="cell" data-tags="[]" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure that all input values are strings</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fuzzy_match(row, choices, scorer<span class="op">=</span>fuzz.ratio, threshold<span class="op">=</span><span class="dv">80</span>):</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Convert the input 'row' to string to avoid the TypeError</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    row <span class="op">=</span> <span class="bu">str</span>(row)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract the match and score</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    match, score <span class="op">=</span> process.extractOne(row, choices, scorer<span class="op">=</span>scorer)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return the match only if it meets the threshold</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> match <span class="cf">if</span> score <span class="op">&gt;=</span> threshold <span class="cf">else</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cfb7aa1f-c163-427c-abe9-d82f2809f3f4" class="cell" data-tags="[]" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>evictions_matches<span class="op">=</span> pd.DataFrame(unique_schools_evictions, columns<span class="op">=</span>[<span class="st">'school_name'</span>])</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply fuzzy matching on each unique name from evictions to unique names from attendance</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>evictions_matches[<span class="st">'matched_name'</span>] <span class="op">=</span> evictions_matches[<span class="st">'school_name'</span>].<span class="bu">apply</span>(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    fuzzy_match, choices<span class="op">=</span>unique_schools_attendance</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge the matched names back with the original evictions_in_catchments DataFrame</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>evictions_in_catchments <span class="op">=</span> evictions_in_catchments.merge(</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    evictions_matches, on<span class="op">=</span><span class="st">'school_name'</span>, how<span class="op">=</span><span class="st">'left'</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="merge-attendance-data-with-catchment-data" class="level1">
+<h1>Merge Attendance Data with Catchment Data</h1>
+<p>I added a year column for the evictions and then merged with the attendance data on both year and school name.</p>
+<div id="09eed553-4de3-49e7-9c95-56b5121233cc" class="cell" data-tags="[]" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#group evictions by year</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>evictions_in_catchments[<span class="st">'year'</span>] <span class="op">=</span> evictions_in_catchments[<span class="st">'d_filing'</span>].<span class="bu">str</span>[:<span class="dv">4</span>] <span class="co">#add a column with the year, extracted from the full date</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="2dc6dfa4-0fd0-40af-ad46-cd3da9f6e9a1" class="cell" data-tags="[]" data-execution_count="179">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Add attendance data to school catchments</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>evictions_full <span class="op">=</span> pd.merge(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    evictions_in_catchments, </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    attendance, </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    left_on<span class="op">=</span>[<span class="st">'matched_name'</span>, <span class="st">'year'</span>],  <span class="co"># columns in evictions, created w/ fuzzy matching</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    right_on<span class="op">=</span>[<span class="st">'School Name'</span>, <span class="st">'year'</span>],  <span class="co"># columns in attendance</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">'inner'</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>evictions_full.head()</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">#len(evictions_full)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="179">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">id</th>
+<th data-quarto-table-cell-role="th">d_filing</th>
+<th data-quarto-table-cell-role="th">parcel_number</th>
+<th data-quarto-table-cell-role="th">latitude</th>
+<th data-quarto-table-cell-role="th">longitude</th>
+<th data-quarto-table-cell-role="th">geometry</th>
+<th data-quarto-table-cell-role="th">index_right</th>
+<th data-quarto-table-cell-role="th">OBJECTID</th>
+<th data-quarto-table-cell-role="th">ES_ID</th>
+<th data-quarto-table-cell-role="th">ES_NAME</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">ULCS Code</th>
+<th data-quarto-table-cell-role="th">SCN Code</th>
+<th data-quarto-table-cell-role="th">School Name</th>
+<th data-quarto-table-cell-role="th">Sector</th>
+<th data-quarto-table-cell-role="th">Category</th>
+<th data-quarto-table-cell-role="th">Group</th>
+<th data-quarto-table-cell-role="th">Total Students (Yearly)</th>
+<th data-quarto-table-cell-role="th"># with 95%+ Attendance (Yearly)</th>
+<th data-quarto-table-cell-role="th">% with 95%+ Attendance (Yearly)</th>
+<th data-quarto-table-cell-role="th">previous_year_attendance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>LT-16-01-04-3000</td>
+<td>2016-01-04 00:00:00</td>
+<td>871123700</td>
+<td>39.918318</td>
+<td>-75.171171</td>
+<td>POINT (-75.17117 39.91832)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>2240</td>
+<td>224</td>
+<td>F. Amedee Bregy School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>470</td>
+<td>123</td>
+<td>26.17</td>
+<td>27.43</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>LT-16-01-19-4952</td>
+<td>2016-01-19 00:00:00</td>
+<td>262057400</td>
+<td>39.917632</td>
+<td>-75.177185</td>
+<td>POINT (-75.17718 39.91763)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>2240</td>
+<td>224</td>
+<td>F. Amedee Bregy School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>470</td>
+<td>123</td>
+<td>26.17</td>
+<td>27.43</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>LT-16-01-28-6081</td>
+<td>2016-01-28 00:00:00</td>
+<td>881113407</td>
+<td>39.903321</td>
+<td>-75.192340</td>
+<td>POINT (-75.19234 39.90332)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>2240</td>
+<td>224</td>
+<td>F. Amedee Bregy School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>470</td>
+<td>123</td>
+<td>26.17</td>
+<td>27.43</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>LT-16-01-28-6084</td>
+<td>2016-01-28 00:00:00</td>
+<td>881113401</td>
+<td>39.903321</td>
+<td>-75.192340</td>
+<td>POINT (-75.19234 39.90332)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>2240</td>
+<td>224</td>
+<td>F. Amedee Bregy School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>470</td>
+<td>123</td>
+<td>26.17</td>
+<td>27.43</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>LT-16-01-28-6088</td>
+<td>2016-01-28 00:00:00</td>
+<td>881113408</td>
+<td>39.903321</td>
+<td>-75.192340</td>
+<td>POINT (-75.19234 39.90332)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>2240</td>
+<td>224</td>
+<td>F. Amedee Bregy School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>470</td>
+<td>123</td>
+<td>26.17</td>
+<td>27.43</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 46 columns</p>
+</div>
+</div>
+</div>
+<div id="227188b3-519b-4ec5-bb77-810d3aa7f424" class="cell" data-tags="[]" data-execution_count="180">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>evictions_by_year <span class="op">=</span> evictions_full.groupby([<span class="st">'year'</span>, <span class="st">'school_name'</span>]).size().reset_index(name<span class="op">=</span><span class="st">'eviction_count'</span>) <span class="co">#group by year and elementary school catchment, then count and make that a df</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>evictions_by_year.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="180">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">school_name</th>
+<th data-quarto-table-cell-role="th">eviction_count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2016</td>
+<td>Abram Jenks School</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2016</td>
+<td>Add B Anderson School</td>
+<td>76</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2016</td>
+<td>Alain Locke School</td>
+<td>143</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2016</td>
+<td>Albert M Greenfield School</td>
+<td>234</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2016</td>
+<td>Alexander Adaire School</td>
+<td>42</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="2ce162a9-ab2c-4237-afa0-aade74a1ea06" class="cell" data-tags="[]" data-execution_count="181">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#merge those counts into the main df</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>evictions_and_attendance <span class="op">=</span> pd.merge(evictions_full, evictions_by_year, on<span class="op">=</span>[<span class="st">'year'</span>, <span class="st">'school_name'</span>], how<span class="op">=</span><span class="st">'inner'</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># now this df has both eviction count and attendance data</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>evictions_and_attendance.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="181">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">id</th>
+<th data-quarto-table-cell-role="th">d_filing</th>
+<th data-quarto-table-cell-role="th">parcel_number</th>
+<th data-quarto-table-cell-role="th">latitude</th>
+<th data-quarto-table-cell-role="th">longitude</th>
+<th data-quarto-table-cell-role="th">geometry</th>
+<th data-quarto-table-cell-role="th">index_right</th>
+<th data-quarto-table-cell-role="th">OBJECTID</th>
+<th data-quarto-table-cell-role="th">ES_ID</th>
+<th data-quarto-table-cell-role="th">ES_NAME</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">SCN Code</th>
+<th data-quarto-table-cell-role="th">School Name</th>
+<th data-quarto-table-cell-role="th">Sector</th>
+<th data-quarto-table-cell-role="th">Category</th>
+<th data-quarto-table-cell-role="th">Group</th>
+<th data-quarto-table-cell-role="th">Total Students (Yearly)</th>
+<th data-quarto-table-cell-role="th"># with 95%+ Attendance (Yearly)</th>
+<th data-quarto-table-cell-role="th">% with 95%+ Attendance (Yearly)</th>
+<th data-quarto-table-cell-role="th">previous_year_attendance</th>
+<th data-quarto-table-cell-role="th">eviction_count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>LT-16-01-04-3000</td>
+<td>2016-01-04 00:00:00</td>
+<td>871123700</td>
+<td>39.918318</td>
+<td>-75.171171</td>
+<td>POINT (-75.17117 39.91832)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>224</td>
+<td>F. Amedee Bregy School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>470</td>
+<td>123</td>
+<td>26.17</td>
+<td>27.43</td>
+<td>58</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>LT-16-01-19-4952</td>
+<td>2016-01-19 00:00:00</td>
+<td>262057400</td>
+<td>39.917632</td>
+<td>-75.177185</td>
+<td>POINT (-75.17718 39.91763)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>224</td>
+<td>F. Amedee Bregy School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>470</td>
+<td>123</td>
+<td>26.17</td>
+<td>27.43</td>
+<td>58</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>LT-16-01-28-6081</td>
+<td>2016-01-28 00:00:00</td>
+<td>881113407</td>
+<td>39.903321</td>
+<td>-75.192340</td>
+<td>POINT (-75.19234 39.90332)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>224</td>
+<td>F. Amedee Bregy School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>470</td>
+<td>123</td>
+<td>26.17</td>
+<td>27.43</td>
+<td>58</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>LT-16-01-28-6084</td>
+<td>2016-01-28 00:00:00</td>
+<td>881113401</td>
+<td>39.903321</td>
+<td>-75.192340</td>
+<td>POINT (-75.19234 39.90332)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>224</td>
+<td>F. Amedee Bregy School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>470</td>
+<td>123</td>
+<td>26.17</td>
+<td>27.43</td>
+<td>58</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>LT-16-01-28-6088</td>
+<td>2016-01-28 00:00:00</td>
+<td>881113408</td>
+<td>39.903321</td>
+<td>-75.192340</td>
+<td>POINT (-75.19234 39.90332)</td>
+<td>9.0</td>
+<td>10.0</td>
+<td>2240</td>
+<td>Bregy, F Amedee</td>
+<td>...</td>
+<td>224</td>
+<td>F. Amedee Bregy School</td>
+<td>District</td>
+<td>All Students</td>
+<td>All Students</td>
+<td>470</td>
+<td>123</td>
+<td>26.17</td>
+<td>27.43</td>
+<td>58</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 47 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="group-by-year-and-school" class="level1">
+<h1>Group by Year and School</h1>
+<p>This gave me a summary of how many evictions there were in each school catchment each year, which I then plotted to examine for visual trends.</p>
+<div id="161502ab-da42-4d6b-bf3a-a143ca7eb3b6" class="cell" data-tags="[]" data-execution_count="338">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>evictions_grouped_for_plotting <span class="op">=</span> evictions_and_attendance.sort_values(<span class="st">'d_filing'</span>).drop_duplicates([<span class="st">'School Name'</span>,<span class="st">'year'</span>], keep<span class="op">=</span><span class="st">'last'</span>).reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="evictions-over-time" class="level1">
+<h1>Evictions Over Time</h1>
+<p>Because there are 100+ schools, it made more sense to plot the average than to try to plot all of them. We can see the 2020 drop in evictions caused by the eviction moratorium due to Covid-19.</p>
+<div id="42b06257-53d0-43cf-9af7-0a75dbcdf7f9" class="cell" data-tags="[]" data-execution_count="420">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Group by 'year' and calculate the average eviction count</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>avg_evictions_over_time <span class="op">=</span> evictions_grouped_for_plotting.groupby(<span class="st">'year'</span>)[<span class="st">'eviction_count'</span>].mean().reset_index()</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure and axis</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the average eviction count over time (on the left y-axis)</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>avg_evictions_over_time, x<span class="op">=</span><span class="st">'year'</span>, y<span class="op">=</span><span class="st">'eviction_count'</span>, marker<span class="op">=</span><span class="st">'^'</span>, markersize<span class="op">=</span><span class="dv">12</span>, markerfacecolor<span class="op">=</span><span class="st">'#000080'</span>, ax<span class="op">=</span>ax1, color<span class="op">=</span><span class="st">'#000080'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>ax1.set_facecolor(<span class="st">'#dbeef6'</span>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>fig.patch.set_facecolor(<span class="st">'lightblue'</span>)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Set title and labels</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Evictions Across Catchments'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Year'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Average Eviction Count'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(axis<span class="op">=</span><span class="st">'y'</span>)</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate x-axis labels for better readability</span></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Manually set the y-ticks</span></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>y_ticks <span class="op">=</span> np.arange(<span class="dv">0</span>, avg_evictions_over_time[<span class="st">'eviction_count'</span>].<span class="bu">max</span>() <span class="op">+</span> <span class="dv">50</span>, <span class="dv">50</span>)</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>plt.yticks(y_ticks, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust the layout to avoid clipping</span></span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-18-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="attendance-rates-over-time" class="level1">
+<h1>Attendance Rates Over Time</h1>
+<p>In general, average 95%+ attendance rates hovered around 40% before increasing slightly from 2017-2020.</p>
+<div id="aa9c2a57-a280-4631-857b-148f9ba01ff2" class="cell" data-tags="[]" data-execution_count="428">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>attendance[<span class="st">'% with 95%+ Attendance (Yearly)'</span>] <span class="op">=</span> pd.to_numeric(attendance[<span class="st">'% with 95%+ Attendance (Yearly)'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  Group by year and calculate average attendance</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>avg_attendance_by_year <span class="op">=</span> attendance.groupby(<span class="st">'year'</span>)[<span class="st">'% with 95%+ Attendance (Yearly)'</span>].mean()</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the average attendance by year</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>plt.plot(avg_attendance_by_year.index, avg_attendance_by_year.values, marker<span class="op">=</span><span class="st">'^'</span>, markersize<span class="op">=</span><span class="dv">12</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, color<span class="op">=</span><span class="st">'#000080'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding title and labels</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average 95%+ Attendance Rate by Year'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Average Attendance (%)'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">100</span>)</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-19-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="attendance-rate-vs-eviction-count" class="level1">
+<h1>Attendance Rate vs Eviction Count</h1>
+<p>Combined across all years, average attendance rates dropped when there were more evictions at first, but the pattern did not hold for the catchments with the highest numbers of evictions</p>
+<div id="d89596f6-c011-49d9-aecc-4ce2d4b30093" class="cell" data-tags="[]" data-execution_count="396">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create eviction buckets </span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">150</span>, <span class="dv">200</span>, <span class="dv">250</span>, <span class="dv">300</span>, <span class="dv">1000</span>]  <span class="co"># Example bins (customize as needed)</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">'0-49'</span>, <span class="st">'50-99'</span>, <span class="st">'100-149'</span>, <span class="st">'150-199'</span>, <span class="st">'200-249'</span>, <span class="st">'250-299'</span>, <span class="st">'300+'</span>]  <span class="co"># Labels for the bins</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>evictions_grouped_for_plotting[<span class="st">'eviction_bucket'</span>] <span class="op">=</span> pd.cut(</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    evictions_grouped_for_plotting[<span class="st">'eviction_count'</span>], bins<span class="op">=</span>bins, labels<span class="op">=</span>labels, right<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the average attendance per eviction bucket</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>attendance_by_bucket <span class="op">=</span> evictions_grouped_for_plotting.groupby(<span class="st">'eviction_bucket'</span>)[<span class="st">'% with 95%+ Attendance (Yearly)'</span>].mean().reset_index()</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the bar chart</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span><span class="st">'eviction_bucket'</span>, y<span class="op">=</span><span class="st">'% with 95%+ Attendance (Yearly)'</span>, data<span class="op">=</span>attendance_by_bucket, palette<span class="op">=</span><span class="st">'coolwarm'</span>)</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Set plot labels and title</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Eviction Count in Catchment'</span>)</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Average Attendance (%)'</span>)</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average 95%+ Attendance Rate vs Eviction Count (Bucketed)'</span>)</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-20-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="examining-the-data-year-by-year" class="level1">
+<h1>Examining the Data Year by Year</h1>
+<p>Plotting the school attendance rates by evictions in catchment separately for each year in the data (2016-2020), I could see the expected pattern of a negative slope: more evictions negatively impacts attendance. Because eviction numbers could be quite different for the city overall year-to-year, it was easier to see patterns within years than in the data across all years.</p>
+<div id="f3f4cc83-88e8-47e1-85e2-a92c34c7f92d" class="cell" data-tags="[]" data-execution_count="430">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> evictions_grouped_for_plotting[<span class="st">'year'</span>].unique()  <span class="co"># Get all unique years</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Iterate through each year to create a plot for that year</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> years:</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter the data for the current year</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    data_for_year <span class="op">=</span> evictions_grouped_for_plotting[evictions_grouped_for_plotting[<span class="st">'year'</span>] <span class="op">==</span> year]</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a figure and axis</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    fig4, ax4 <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot eviction count (on the left y-axis)</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    sns.lineplot(data<span class="op">=</span>data_for_year, x<span class="op">=</span><span class="st">'eviction_count'</span>, y<span class="op">=</span><span class="st">'% with 95%+ Attendance (Yearly)'</span>, hue<span class="op">=</span><span class="st">'school_name'</span>, marker<span class="op">=</span><span class="st">'o'</span>, ax<span class="op">=</span>ax4, legend<span class="op">=</span><span class="va">None</span>, color<span class="op">=</span><span class="st">'b'</span>)</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set labels and title for the first axis (Evictions)</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    ax4.set_xlabel(<span class="st">'Eviction Count'</span>)</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>    ax4.set_ylabel(<span class="st">'95%+ Attendance Rate'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set the title for the year</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>    ax4.set_title(<span class="ss">f"Eviction and Attendance Rates for </span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Rotate x-axis labels for better readability</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>    plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Manually set the y-ticks</span></span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>    y_ticks4 <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">101</span>, <span class="dv">10</span>)  <span class="co"># Set the ticks from 0 to 100 with a step of 10</span></span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>    plt.yticks(y_ticks4, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Adjust the layout to avoid clipping</span></span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Show the plot for the current year</span></span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-21-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-21-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-21-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-21-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-21-output-5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="what-about-prior-year-evictions" class="level2">
+<h2 class="anchored" data-anchor-id="what-about-prior-year-evictions">What about Prior Year Evictions?</h2>
+<p>I was curious if evictions from the year previous would correlate more or less with poor attendance; these graphs showed a lower correlation than looking at evictions in the same year.</p>
+<div id="57d38b9f-89f8-45f7-b3eb-6c436cc9ae7c" class="cell" data-tags="[]" data-execution_count="431">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sort the dataset by year</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>evictions_grouped_for_plotting <span class="op">=</span> evictions_grouped_for_plotting.sort_values(by<span class="op">=</span>[<span class="st">'school_name'</span>, <span class="st">'year'</span>])</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column for the previous year's eviction count</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>evictions_grouped_for_plotting[<span class="st">'previous_year_eviction_count'</span>] <span class="op">=</span> evictions_grouped_for_plotting.groupby(<span class="st">'school_name'</span>)[<span class="st">'eviction_count'</span>].shift(<span class="dv">1</span>)</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop rows where there is no previous year's eviction data (i.e., the first year for each school)</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>evictions_grouped_for_plotting_prev <span class="op">=</span> evictions_grouped_for_plotting.dropna(subset<span class="op">=</span>[<span class="st">'previous_year_eviction_count'</span>])</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Iterate through each year to create a plot for that year</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> evictions_grouped_for_plotting_prev[<span class="st">'year'</span>].unique():</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter the data for the current year</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    data_for_year <span class="op">=</span> evictions_grouped_for_plotting_prev[evictions_grouped_for_plotting_prev[<span class="st">'year'</span>] <span class="op">==</span> year]</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a figure and axis</span></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    fig5, ax5 <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the attendance rate against the previous year's eviction count</span></span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>    sns.lineplot(data<span class="op">=</span>data_for_year, x<span class="op">=</span><span class="st">'previous_year_eviction_count'</span>, y<span class="op">=</span><span class="st">'% with 95%+ Attendance (Yearly)'</span>, </span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>                 hue<span class="op">=</span><span class="st">'school_name'</span>, marker<span class="op">=</span><span class="st">'o'</span>, ax<span class="op">=</span>ax5, legend<span class="op">=</span><span class="va">None</span>, color<span class="op">=</span><span class="st">'b'</span>)</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set labels and title for the first axis (Evictions)</span></span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>    ax5.set_xlabel(<span class="st">'Previous Year Eviction Count'</span>)</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>    ax5.set_ylabel(<span class="st">'95%+ Attendance Rate'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set the title for the year</span></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>    ax5.set_title(<span class="ss">f"Attendance vs Previous Year Evictions for </span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Rotate x-axis labels for better readability</span></span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a>    plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Manually set the y-ticks</span></span>
+<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a>    y_ticks5 <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">101</span>, <span class="dv">10</span>)  <span class="co"># Set the ticks from 0 to 100 with a step of 10</span></span>
+<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a>    plt.yticks(y_ticks5, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Adjust the layout to avoid clipping</span></span>
+<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Show the plot for the current year</span></span>
+<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-22-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-22-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-22-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-22-output-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="machine-learning-modeling-with-scikit" class="level1">
+<h1>Machine Learning: Modeling with Scikit</h1>
+<div id="dd705dfc-57de-46ae-b3d1-8e1e19975bbb" class="cell" data-tags="[]" data-execution_count="219">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="219">
+<style>#sk-container-id-7 {color: black;}#sk-container-id-7 pre{padding: 0;}#sk-container-id-7 div.sk-toggleable {background-color: white;}#sk-container-id-7 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-7 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-7 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-7 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-7 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-7 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-7 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-7 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-7 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-7 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-7 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-7 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-7 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-7 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-7 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-7 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-7 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-7 div.sk-item {position: relative;z-index: 1;}#sk-container-id-7 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-7 div.sk-item::before, #sk-container-id-7 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-7 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-7 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-7 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-7 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-7 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-7 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-7 div.sk-label-container {text-align: center;}#sk-container-id-7 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-7 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-7" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-13" type="checkbox" checked=""><label for="sk-estimator-id-13" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div>
+</div>
+</div>
+<div id="6e0c9ca8-6eac-4a9f-991f-5778b17db9d9" class="cell" data-tags="[]" data-execution_count="231">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># split into training and testing data</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>train_set, test_set <span class="op">=</span> train_test_split(evictions_grouped_for_plotting, test_size<span class="op">=</span><span class="fl">0.3</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="features" class="level1">
+<h1>Features</h1>
+<p>I wanted to see if I could predict attendance rate using the following information: 1. Eviction count in the catchment 2. Year 3. Attendance rate from the previous year 4. Eviction count from the previous year</p>
+<div id="c69b1682-53c2-4c2c-b3bc-268a7a7d92f9" class="cell" data-tags="[]" data-execution_count="232">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Features</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>X_train <span class="op">=</span> train_set[[<span class="st">'eviction_count'</span>, <span class="st">'year'</span>, <span class="st">'previous_year_attendance'</span>, <span class="st">'previous_year_eviction_count'</span>]].values</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>X_test <span class="op">=</span> test_set[[<span class="st">'eviction_count'</span>, <span class="st">'year'</span>, <span class="st">'previous_year_attendance'</span>, <span class="st">'previous_year_eviction_count'</span>]].values</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co"># The output to predict</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>y_train <span class="op">=</span> train_set[<span class="st">'% with 95%+ Attendance (Yearly)'</span>].values</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>y_test <span class="op">=</span> test_set[<span class="st">'% with 95%+ Attendance (Yearly)'</span>].values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="5f73fc89-a6ad-4288-924a-774b38ac3179" class="cell" data-tags="[]" data-execution_count="222">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="147ebad4-3910-458b-9e80-5eb44d2bfac0" class="cell" data-tags="[]" data-execution_count="233">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale the training features</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>X_train_scaled <span class="op">=</span> scaler.fit_transform(X_train)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale the test features using the same scaling parameters from the training data</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>X_test_scaled <span class="op">=</span> scaler.transform(X_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="fit-and-score-the-model" class="level2">
+<h2 class="anchored" data-anchor-id="fit-and-score-the-model">Fit and score the model</h2>
+<p>Result: on the training data, the model scores 0.856. On the test data, it scores 0.838.</p>
+<div id="c828585f-4d13-4656-88d6-ab9b8b2a44af" class="cell" data-tags="[]" data-execution_count="224">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>model.fit(X_train_scaled, y_train)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>model.score(X_train_scaled, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="224">
+<pre><code>0.8563331029398836</code></pre>
+</div>
+</div>
+<div id="d5a3eb00-73f2-4f32-82dc-5f41bf94065a" class="cell" data-tags="[]" data-execution_count="258">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> model.predict(X_test_scaled)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>model.score(X_test_scaled, y_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="258">
+<pre><code>0.8375502733651176</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="plot-the-predicted-vs-actual-results" class="level1">
+<h1>Plot the Predicted vs Actual Results</h1>
+<div id="377a7a11-2b5c-4aca-a983-1add76516680" class="cell" data-tags="[]" data-execution_count="457">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co"># eviction count, the first index (0)</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>plt.scatter(X_test[:, <span class="dv">0</span>], y_test, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Actual Attendance'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Overlay the predicted values on the same graph</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>plt.scatter(X_test[:, <span class="dv">0</span>], y_pred, color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Predicted Attendance'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Manually set the y-ticks</span></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>y_ticks <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">101</span>, <span class="dv">10</span>)  <span class="co"># Set the ticks from 0 to 100 with a step of 10</span></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>plt.yticks(y_ticks, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>plt.gca().get_yaxis().clear()</span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Set labels and title</span></span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Eviction Count'</span>)</span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'95%+ Attendance Rate'</span>)</span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Actual vs Predicted Attendance Based on Eviction Count and Prior Year'</span>)</span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the legend</span></span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="aca409d2-f46c-4a0c-a98b-db68821ec08d" class="cell" data-tags="[]" data-execution_count="442">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Coerce the arrays to numeric values</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>y_test_numeric <span class="op">=</span> pd.to_numeric(y_test, errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>y_pred_numeric <span class="op">=</span> pd.to_numeric(y_pred, errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Subtract one array from the other</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>y_dif <span class="op">=</span> <span class="bu">abs</span>(y_pred_numeric <span class="op">-</span> y_test_numeric)</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="co"># eviction count, the first index (0)</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>plt.scatter(X_test[:, <span class="dv">0</span>], y_dif, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Actual Attendance'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Set labels and title</span></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Eviction Count'</span>)</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'95%+ Attendance Rate Percentage Difference'</span>)</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Magnitude of Difference Between Actual and Predicted Attendance Rates'</span>)</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-31-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="a-subgroup-2018" class="level1">
+<h1>A Subgroup: 2018</h1>
+<p>I was curious to see how the same process would fair examining only a single year, since I noted that the patterns might be stronger within a year compared to between years. Following the same process as above but filtering only to 2018 data, the results were:</p>
+<p>-Score on training data: 0.798</p>
+<p>-Score on test data: 0.884</p>
+<p>It does seem odd that the model would be better on the test data than on the training data; but, at this point, within a single year, we may be getting into small sample sizes.</p>
+<div id="a4084cc6-fc5f-4c89-b4ea-05c997420a1c" class="cell" data-tags="[]" data-execution_count="300">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>df_2018 <span class="op">=</span> evictions_grouped_for_plotting[evictions_grouped_for_plotting[<span class="st">'year'</span>] <span class="op">==</span> <span class="st">'2018'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="33e0bd7b-b21d-46a4-9bb6-b3fa9c6932cd" class="cell" data-tags="[]" data-execution_count="301">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>X_2018 <span class="op">=</span> df_2018[[<span class="st">'eviction_count'</span>, <span class="st">'year'</span>, <span class="st">'previous_year_attendance'</span>, <span class="st">'previous_year_eviction_count'</span>]]  <span class="co"># Feature (independent variable)</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>y_2018 <span class="op">=</span> df_2018[<span class="st">'% with 95%+ Attendance (Yearly)'</span>]  <span class="co"># Target (dependent variable)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="722a6f5c-a62f-4640-9b2e-b8f6d2c20cbd" class="cell" data-tags="[]" data-execution_count="302">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>X_train18, X_test18, y_train18, y_test18 <span class="op">=</span> train_test_split(X_2018, y_2018, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="d5cca96a-1901-43c7-b63f-e7660d766312" class="cell" data-tags="[]" data-execution_count="303">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale the training features</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>X_train_scaled18 <span class="op">=</span> scaler.fit_transform(X_train18)</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale the test features using the same scaling parameters from the training data</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>X_test_scaled18 <span class="op">=</span> scaler.transform(X_test18)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="56d5b0ce-18b3-4027-967c-77d44da9199b" class="cell" data-tags="[]" data-execution_count="309">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the model </span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>model18 <span class="op">=</span> LinearRegression()</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the model on the training data</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>model18.fit(X_train_scaled18, y_train18)</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Make predictions</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>y_pred18 <span class="op">=</span> model18.predict(X_test_scaled18)</span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluate the model</span></span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>mse <span class="op">=</span> mean_squared_error(y_test18, y_pred18)</span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Mean Squared Error: </span><span class="sc">{</span>mse<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the model's coefficients </span></span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Model Coefficients: </span><span class="sc">{</span>model<span class="sc">.</span>coef_<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean Squared Error: 23.312277965349583
+Model Coefficients: [-2.69921033  0.95368761 12.84878094  1.68647672]</code></pre>
+</div>
+</div>
+<div id="865425d0-1a76-4597-8ebc-8968ed058fac" class="cell" data-tags="[]" data-execution_count="310">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>model18.score(X_train_scaled18, y_train18)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="310">
+<pre><code>0.7978618516361651</code></pre>
+</div>
+</div>
+<div id="fb197bd4-1a79-4a64-891a-d593a2bff705" class="cell" data-tags="[]" data-execution_count="312">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>model18.score(X_test_scaled18, y_test18)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="312">
+<pre><code>0.8836601358171393</code></pre>
+</div>
+</div>
+<div id="49e8c037-05a8-48f6-8459-d56eb8f944bd" class="cell" data-tags="[]" data-execution_count="458">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co"># eviction count, the first index (0)</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(X_test_scaled18[:, <span class="dv">0</span>], y_test18, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Actual Attendance'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Overlay the predicted values on the same graph</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>plt.scatter(X_test_scaled18[:, <span class="dv">0</span>], y_pred18, color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Predicted Attendance'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Manually set the y-ticks</span></span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>y_ticks <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">101</span>, <span class="dv">10</span>)  <span class="co"># Set the ticks from 0 to 100 with a step of 10</span></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>plt.yticks(y_ticks, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>plt.gca().get_yaxis().clear()</span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Set labels and title</span></span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Eviction Count'</span>)</span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'95%+ Attendance Rate'</span>)</span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'2018 Actual vs Predicted Attendance Based on Eviction Count and Prior Year'</span>)</span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Set y-axis range from 0 to 100</span></span>
+<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">100</span>)</span>
+<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the legend</span></span>
+<span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb46-24"><a href="#cb46-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-25"><a href="#cb46-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb46-26"><a href="#cb46-26" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb46-27"><a href="#cb46-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final Project AMarqusee_files/figure-html/cell-39-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="what-do-evictions-add-to-the-model" class="level1">
+<h1>What do evictions add to the model?</h1>
+<p>My model scored well for predicting attendance using previous year attendance, year, eviction count, and previous year eviction count. But how much did eviction information contribute? To find out, I ran the same linear modeling process with only the year and previous year attendance data, no eviction data.</p>
+<p>Results: without eviction data, the model scored 0.849 on the training data and 0.827 on the test data.</p>
+<p>Comparing to the results with eviction information, this means that adding eviction information improved by model’s score by 0.01.</p>
+<div id="e6ec0e49-4c41-4698-9ea6-30cb5fcdbe24" class="cell" data-tags="[]" data-execution_count="273">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>train_set_noevic, test_set_noevic <span class="op">=</span> train_test_split(evictions_grouped_for_plotting, test_size<span class="op">=</span><span class="fl">0.3</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="284686b6-2954-4fbf-adc2-815381208bcd" class="cell" data-tags="[]" data-execution_count="274">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Features</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>X_train_noevic <span class="op">=</span> train_set_noevic[[<span class="st">'year'</span>, <span class="st">'previous_year_attendance'</span>]].values</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="co">#X_train = X_train[:, np.newaxis]</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>X_test_noevic <span class="op">=</span> test_set_noevic[[<span class="st">'year'</span>, <span class="st">'previous_year_attendance'</span>]].values</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="co">#X_test = X_test[:, np.newaxis]</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Labels</span></span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>y_train_noevic <span class="op">=</span> train_set_noevic[<span class="st">'% with 95%+ Attendance (Yearly)'</span>].values</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>y_test_noevic <span class="op">=</span> test_set_noevic[<span class="st">'% with 95%+ Attendance (Yearly)'</span>].values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="b61198d2-c1aa-4088-8bcf-c55e1159c7f9" class="cell" data-tags="[]" data-execution_count="275">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale the training features</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>X_train_noevic_scaled <span class="op">=</span> scaler.fit_transform(X_train_noevic)</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale the test features using the same scaling parameters from the training data</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>X_test_noevic_scaled <span class="op">=</span> scaler.transform(X_test_noevic)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="98ace7a6-c4bc-4be8-815a-11efb1daa8ff" class="cell" data-tags="[]" data-execution_count="276">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>model_noevic <span class="op">=</span> LinearRegression()</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>model_noevic.fit(X_train_noevic_scaled, y_train_noevic)</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>model_noevic.score(X_train_noevic_scaled, y_train_noevic)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="276">
+<pre><code>0.8489306354063326</code></pre>
+</div>
+</div>
+<div id="7ebf6446-322d-4517-abf9-5ee580233925" class="cell" data-tags="[]" data-execution_count="280">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>y_pred_noevic <span class="op">=</span> model_noevic.predict(X_test_noevic_scaled)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>model_noevic.score(X_test_noevic_scaled, y_test_noevic)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="280">
+<pre><code>0.8274920454812185</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Anthony Marqusee</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
