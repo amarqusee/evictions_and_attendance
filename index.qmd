@@ -1,14 +1,76 @@
 ---
-title: "MUSA 550: Final Project Template"
-subtitle: "An example website demonstrating the power of Quarto for sharing analyses on the web"
+title: "Exploring Evictions and Attendance in Philadelphia Schools"
+subtitle: "MUSA 550 Final Project by Anthony Marqusee"
 ---
 
-## Welcome!
+Can information about evictions help predict school attendance? This was the question I sought to begin exploring, using data on evictions and attendance rates in Philadelphia elementary schools. 
 
-We can create beautiful websites that describe complex technical analyses in Python using Quarto and deploy them online using GitHub Pages. This combination of tools is a really powerful way to create and share your work. This website is a demo that is meant to be used to create your own Quarto website for the final project in MUSA 550.
+## Context of Evictions in Philadelphia
+Philadelphia's eviction rate is much higher than other parts of Pennsylvania, with  [3.48% of renters facing eviction each year](https://evictionlab.org/rankings/#/evictions?r=Pennsylvania&a=0&d=evictionRate&l=0). Recent efforts to create a "right to counsel" guaranteeing legal representation for some tenants facing eviction may stem the problem, but gentrification combined with high poverty rates have generally kept eviction high, with [Black renters especially likely to face eviction](https://www.reinvestment.com/insights/evictions-in-philadelphia-a-data-policy-update/). [Families with children](https://www.nytimes.com/2023/10/02/upshot/evictions-children-american-renters.html) are in general at a higher risk of facing eviction.
 
-Quarto is a relatively new tool, but is becoming popular quickly. It’s a successor to the Rmarkdown ecosystem that combines functionality into a single tool and also extends its computation power to other languages. Most importantly for us, Quarto supports executing Python code, allowing us to convert Jupyter notebooks to HTML and share them online.
+Facing eviction from a home can destabilize many aspects of a family’s life, jeopardizing their ability to maintain employment, address health concerns, and pursue education. I wanted to see whether elementary school catchments with higher numbers of evictions saw lower attendance rates at school.
 
-::: {.callout-important}
-This template site, including the layout it uses, is just a suggested place to start! For your final project, you’re welcome (and encouraged) to make as many changes as you like to best fit your project.
-:::
+## Data Acquisition
+From Jonathan Pyle of Philadelphia Legal Assistance, I obtained csv data of all eviction cases in Philadelphia's Landlord-Tenant Court from 2016 onwards. The data included the address of the premises (helpfully already geocoded). I also obtained shapefiles from [OpenDataPhilly](https://opendataphilly.org/datasets/school-information/) showing the catchments of schools in the district, and [attendance data](https://www.philasd.org/performance/programsservices/open-data/school-performance/#attendance) from the School District of Philadelphia.
+An unfortunate fact is that while the District makes attendance data for the entire city available on a monthly basis, school-specific attendance data is only available aggregated yearly. In the future, it would be interesting to conduct an analysis like this on a monthly basis which might more clearly show relationships between eviction and attendance, but due to this data constraint, I analyzed the relationship on a yearly basis.
+I did not normalize by population because elementary school catchments are already created (boundaries drawn by the District) so as to ensure comparable numbers of students in each school, meaning that the total population of the catchments should also be similar. Measuring attendance as a rate rather than a number similarly dilutes the impact of different sizes of schools. 
+
+## Data Processing
+I conducted a spatial join between geocoded evictions and elementary school catchments to add to each eviction record information about which elementary school catchment the home was located in.
+
+
+I cleaned up the attendance data by limiting it to only data about all students (as opposed to broken down by race or gender) and by assigning it a year: the end year of the school year, since the spring portion of the school year is generally longer than the fall (so, attendance for the 2013-2014 academic year was categorized as 2014). This was to allow me to match the years between the attendance records and evictions record.
+
+
+I then had to manipulate the school names to make them match between the shapefiles of the catchments and the attendance data. The shapefiles listed schools named after people in the format “Last Name, First Name” (ex 'Locke, Alain'), while the attendance data used the format “First Name Last Name School” (ex 'Alain Locke School').
+
+
+`evictions_in_catchments['school_name'] = evictions_in_catchments['ES_NAME'].apply(
+    lambda x: ' '.join(x.split(', ')[::-1]).strip() + ' School' if isinstance(x, str) and ',' in str(x) else x
+)`
+
+I used this code to take the portion after the space, put it in the front, remove the comma, and add ‘School.’ 
+Even so, there were discrepancies preventing me from matching the schools precisely–for example, a school might be listed as “Anthony M Marqusee School” in one place and “Anthony Marqusee School” in another. I used fuzzywuzzy to implement fuzzy matching and was then able to accurately pair the names of all the elementary schools in the data sets. I then used pd.merge to merge attendance data by both school and year. 
+
+The attendance data I used was “percent with 95%+ attendance,” as raw attendance rates were not available. This number reflected the percent of students enrolled at the school who attended school at least 95% of the time. I also added a ‘previous year’s attendance’ column showing attendance at that school in the prior school year.
+
+I then merged the attendance data with the evictions, merging on school name and year. At this point, I had a dataframe of all the evictions, with each eviction instance also having the school and its attendance data for that year.
+
+
+Next, I used groupby and count to get the number of evictions in each school catchment for each year:
+
+`evictions_by_year = evictions_full.groupby(['year', 'school_name']).size().reset_index(name='eviction_count') #group by year and elementary school catchment, then count and make that a df`
+
+I then added that information back into the main dataframe, so each eviction also had the information of how many evictions were in its school catchment that year.
+
+## Exploring the Data
+
+I examined trends in attendance and eviction over time averaged across all schools. 95%+ attendance rates hovered around 40% before increasing after 2017. Eviction rates averaged around 100 before dropping steeply in 2020, the year when the city implemented a covid-19 eviction moratorium.
+
+I graphed attendance rates averaged by eviction count buckets (for example, average attendance rates in catchments with 0-49 evictions, 50-100, etc). At first I saw the expected trend (more evictions are associated with worse attendance), but catchments with 200-249 and 250-300 did not match the trend.
+
+I graphed attendance rates vs evictions for each year in the data (2016-2020) as well as attendance vs evictions in the *prior* year. I could see a negative correlation between attendance and eviction within each year, but no such correlation with prior year evictions.
+
+Visually inspecting plots of evictions vs 95% attendance rates, I could see that within each year, there appeared to be a loose negative correlation as expected: catchments with more evictions saw worse attendance. But across years, because the number of evictions in the catchments varied much more widely than attendance rates did, it was harder to see patterns.
+
+## Machine Learning & Results
+
+I used scikit-learn to attempt to predict 95%+ attendance rates based on: year, eviction count, previous year eviction count, and previous year 95% attendance rates. I used a linear regression model.
+
+On the training data, the model scored 0.856. On the test data, it scores 0.838.
+
+However, I wanted to know the impact of eviction data--after all, it could be that the accuracy of the model came only from prior year attendance data. Therefore, I reran the same steps but used only year and previous year 95% attendance rates, and no eviction information.
+
+This new model scored 0.849 on the training data and 0.827 on the test data.
+
+Therefore, it seems that adding eviction information improved the model score by 0.01.
+
+## Opportunities for Improvement
+
+Ideas for improving the model and/or further research include:
+-coding evictions by what academic year they were part of, rather than calendar year
+-removing 2020 from the data and rerunning, in case the effects of covid harmed the model
+-normalizing evictions for population in each catchment instead of assuming they were comparable
+-examining individual outliers and contextualizing the data with information about what was happening in that school or neighborhood
+-creating interactive visualizations with tooltips allowing the user to see each school
+-creating geographic visualizations of the catchments
