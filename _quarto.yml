@@ -5,7 +5,7 @@ project:
     port: 3333
 
 website:
-  title: "MUSA 550"
+  title: "MUSA 550 Final Project: Anthony Marqusee"
   page-footer:
     left: "Anthony Marqusee"
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
