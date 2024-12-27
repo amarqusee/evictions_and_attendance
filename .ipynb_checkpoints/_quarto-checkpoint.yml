@@ -24,7 +24,7 @@ website:
     contents:
       - href: index.qmd
         text: Introduction
-      - href: docs/Final Project AMarqusee.ipynb
+      - href: analysis/Final Project AMarqusee.ipynb
         text: Evictions and Attendance Rates in Philadelphia School Catchments
 
 format:
